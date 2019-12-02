@@ -4,9 +4,36 @@ public class Main {
 
     public static void main(String[] args){
 
-        // TODO: Declare and initialize a CD and a DVD object.
+        CD myPlaylist = new CD("Favorite Songs",700);
+        DVD homeVideo = new DVD("First Recital", 9000);
 
-        // TODO: Call each CD and DVD method to verify that they work as expected.
+        // Testing CD
+        System.out.println(myPlaylist.loadDisc());
+        myPlaylist.spinDisc();
 
+        myPlaylist.storeData("Billie Eilish - Ocean Eyes");
+        myPlaylist.storeData("Beauvois - Echo");
+
+        System.out.println(myPlaylist.displayInfo());
+        System.out.println(myPlaylist.playContents());
+
+        myPlaylist.deleteAllData();
+
+        System.out.println(myPlaylist.displayInfo());
+
+        // Testing DVD
+        System.out.println("\n*******\n");
+        System.out.println(homeVideo.loadDisc());
+        homeVideo.spinDisc();
+
+        homeVideo.storeData("Claire de Lune - Piano");
+        homeVideo.storeData("Awards Ceremony");
+
+        System.out.println(homeVideo.displayInfo());
+        System.out.println(homeVideo.playContents());
+
+        homeVideo.deleteAllData();
+
+        System.out.println(homeVideo.displayInfo());
     }
 }
